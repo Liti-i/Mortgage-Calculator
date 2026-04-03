@@ -29,43 +29,43 @@
         private void InitializeComponent()
         {
             this.page = new System.Windows.Forms.TabControl();
-            this.Inputpage = new System.Windows.Forms.TabPage();
-            this.Outputpage = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Loantxt = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.Annualtxt = new System.Windows.Forms.TextBox();
-            this.Gracetxt = new System.Windows.Forms.TextBox();
-            this.Gracelbl = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.Calbtn = new System.Windows.Forms.Button();
-            this.Totaltxt = new System.Windows.Forms.TextBox();
-            this.Percentagecheck = new System.Windows.Forms.RadioButton();
-            this.Totallbl = new System.Windows.Forms.Label();
-            this.Loanlbl = new System.Windows.Forms.Label();
-            this.Pricecheck = new System.Windows.Forms.RadioButton();
-            this.Annuallbl = new System.Windows.Forms.Label();
-            this.Repaymentlbl = new System.Windows.Forms.Label();
-            this.Resetbtn = new System.Windows.Forms.Button();
-            this.Repaymenttxt = new System.Windows.Forms.TextBox();
-            this.Outcometlbl = new System.Windows.Forms.Label();
-            this.Outcometxt = new System.Windows.Forms.TextBox();
-            this.FirstOutlbl = new System.Windows.Forms.Label();
-            this.FirstOuttxt = new System.Windows.Forms.TextBox();
-            this.MonthOutlbl = new System.Windows.Forms.Label();
-            this.MonthOuttxt = new System.Windows.Forms.TextBox();
-            this.TotalOuttxt = new System.Windows.Forms.TextBox();
-            this.TotalOutlbl = new System.Windows.Forms.Label();
+            this.pageInput = new System.Windows.Forms.TabPage();
+            this.txtLoan = new System.Windows.Forms.TextBox();
+            this.txtPercentage = new System.Windows.Forms.TextBox();
+            this.txtAnnual = new System.Windows.Forms.TextBox();
+            this.txtGrace = new System.Windows.Forms.TextBox();
+            this.lblGrace = new System.Windows.Forms.Label();
+            this.txtMoney = new System.Windows.Forms.TextBox();
+            this.btnCal = new System.Windows.Forms.Button();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.lblPercentage = new System.Windows.Forms.RadioButton();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblLoan = new System.Windows.Forms.Label();
+            this.lblMoney = new System.Windows.Forms.RadioButton();
+            this.lblAnnual = new System.Windows.Forms.Label();
             this.Prepare = new System.Windows.Forms.GroupBox();
+            this.pageOutput = new System.Windows.Forms.TabPage();
+            this.lblRepayment = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.txtRepayment = new System.Windows.Forms.TextBox();
+            this.lblOutcome = new System.Windows.Forms.Label();
+            this.txtOutcome = new System.Windows.Forms.TextBox();
+            this.lblFirstOut = new System.Windows.Forms.Label();
+            this.txtFirstOut = new System.Windows.Forms.TextBox();
+            this.lblMonthOut = new System.Windows.Forms.Label();
+            this.txtMonthOut = new System.Windows.Forms.TextBox();
+            this.txtTotalOut = new System.Windows.Forms.TextBox();
+            this.lblTotalOut = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.page.SuspendLayout();
-            this.Inputpage.SuspendLayout();
-            this.Outputpage.SuspendLayout();
+            this.pageInput.SuspendLayout();
+            this.pageOutput.SuspendLayout();
             this.SuspendLayout();
             // 
             // page
             // 
-            this.page.Controls.Add(this.Inputpage);
-            this.page.Controls.Add(this.Outputpage);
+            this.page.Controls.Add(this.pageInput);
+            this.page.Controls.Add(this.pageOutput);
             this.page.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.page.Location = new System.Drawing.Point(25, 92);
             this.page.Name = "page";
@@ -73,52 +73,346 @@
             this.page.Size = new System.Drawing.Size(928, 587);
             this.page.TabIndex = 33;
             // 
-            // Inputpage
+            // pageInput
             // 
-            this.Inputpage.BackColor = System.Drawing.Color.SteelBlue;
-            this.Inputpage.Controls.Add(this.Loantxt);
-            this.Inputpage.Controls.Add(this.textBox7);
-            this.Inputpage.Controls.Add(this.Annualtxt);
-            this.Inputpage.Controls.Add(this.Gracetxt);
-            this.Inputpage.Controls.Add(this.Gracelbl);
-            this.Inputpage.Controls.Add(this.textBox6);
-            this.Inputpage.Controls.Add(this.Calbtn);
-            this.Inputpage.Controls.Add(this.Totaltxt);
-            this.Inputpage.Controls.Add(this.Percentagecheck);
-            this.Inputpage.Controls.Add(this.Totallbl);
-            this.Inputpage.Controls.Add(this.Loanlbl);
-            this.Inputpage.Controls.Add(this.Pricecheck);
-            this.Inputpage.Controls.Add(this.Annuallbl);
-            this.Inputpage.Controls.Add(this.Prepare);
-            this.Inputpage.Location = new System.Drawing.Point(4, 51);
-            this.Inputpage.Name = "Inputpage";
-            this.Inputpage.Padding = new System.Windows.Forms.Padding(3);
-            this.Inputpage.Size = new System.Drawing.Size(920, 532);
-            this.Inputpage.TabIndex = 0;
-            this.Inputpage.Text = "輸入貸款資訊";
-            this.Inputpage.Click += new System.EventHandler(this.tabPage1_Click);
+            this.pageInput.BackColor = System.Drawing.Color.SteelBlue;
+            this.pageInput.Controls.Add(this.txtLoan);
+            this.pageInput.Controls.Add(this.txtPercentage);
+            this.pageInput.Controls.Add(this.txtAnnual);
+            this.pageInput.Controls.Add(this.txtGrace);
+            this.pageInput.Controls.Add(this.lblGrace);
+            this.pageInput.Controls.Add(this.txtMoney);
+            this.pageInput.Controls.Add(this.btnCal);
+            this.pageInput.Controls.Add(this.txtTotal);
+            this.pageInput.Controls.Add(this.lblPercentage);
+            this.pageInput.Controls.Add(this.lblTotal);
+            this.pageInput.Controls.Add(this.lblLoan);
+            this.pageInput.Controls.Add(this.lblMoney);
+            this.pageInput.Controls.Add(this.lblAnnual);
+            this.pageInput.Controls.Add(this.Prepare);
+            this.pageInput.Location = new System.Drawing.Point(4, 51);
+            this.pageInput.Name = "pageInput";
+            this.pageInput.Padding = new System.Windows.Forms.Padding(3);
+            this.pageInput.Size = new System.Drawing.Size(920, 532);
+            this.pageInput.TabIndex = 0;
+            this.pageInput.Text = "輸入貸款資訊";
+            this.pageInput.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // Outputpage
+            // txtLoan
             // 
-            this.Outputpage.BackColor = System.Drawing.Color.SteelBlue;
-            this.Outputpage.Controls.Add(this.Repaymentlbl);
-            this.Outputpage.Controls.Add(this.Resetbtn);
-            this.Outputpage.Controls.Add(this.Repaymenttxt);
-            this.Outputpage.Controls.Add(this.Outcometlbl);
-            this.Outputpage.Controls.Add(this.Outcometxt);
-            this.Outputpage.Controls.Add(this.FirstOutlbl);
-            this.Outputpage.Controls.Add(this.FirstOuttxt);
-            this.Outputpage.Controls.Add(this.MonthOutlbl);
-            this.Outputpage.Controls.Add(this.MonthOuttxt);
-            this.Outputpage.Controls.Add(this.TotalOuttxt);
-            this.Outputpage.Controls.Add(this.TotalOutlbl);
-            this.Outputpage.ForeColor = System.Drawing.Color.Transparent;
-            this.Outputpage.Location = new System.Drawing.Point(4, 51);
-            this.Outputpage.Name = "Outputpage";
-            this.Outputpage.Padding = new System.Windows.Forms.Padding(3);
-            this.Outputpage.Size = new System.Drawing.Size(920, 532);
-            this.Outputpage.TabIndex = 1;
-            this.Outputpage.Text = "試算結果";
+            this.txtLoan.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtLoan.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtLoan.Location = new System.Drawing.Point(219, 373);
+            this.txtLoan.Name = "txtLoan";
+            this.txtLoan.Size = new System.Drawing.Size(272, 47);
+            this.txtLoan.TabIndex = 36;
+            this.txtLoan.Text = "單位為年";
+            this.txtLoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtPercentage
+            // 
+            this.txtPercentage.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtPercentage.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtPercentage.Location = new System.Drawing.Point(219, 214);
+            this.txtPercentage.Name = "txtPercentage";
+            this.txtPercentage.Size = new System.Drawing.Size(272, 47);
+            this.txtPercentage.TabIndex = 41;
+            this.txtPercentage.Text = "百分比(%)";
+            this.txtPercentage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtAnnual
+            // 
+            this.txtAnnual.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtAnnual.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtAnnual.Location = new System.Drawing.Point(219, 307);
+            this.txtAnnual.Name = "txtAnnual";
+            this.txtAnnual.Size = new System.Drawing.Size(272, 47);
+            this.txtAnnual.TabIndex = 35;
+            this.txtAnnual.Tag = "";
+            this.txtAnnual.Text = "百分比(%)";
+            this.txtAnnual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtGrace
+            // 
+            this.txtGrace.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtGrace.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtGrace.Location = new System.Drawing.Point(273, 436);
+            this.txtGrace.Name = "txtGrace";
+            this.txtGrace.Size = new System.Drawing.Size(218, 47);
+            this.txtGrace.TabIndex = 37;
+            this.txtGrace.Text = "單位為年";
+            this.txtGrace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblGrace
+            // 
+            this.lblGrace.AutoSize = true;
+            this.lblGrace.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblGrace.ForeColor = System.Drawing.Color.Black;
+            this.lblGrace.Location = new System.Drawing.Point(42, 436);
+            this.lblGrace.Name = "lblGrace";
+            this.lblGrace.Size = new System.Drawing.Size(215, 42);
+            this.lblGrace.TabIndex = 31;
+            this.lblGrace.Text = "寬限期(選填):";
+            // 
+            // txtMoney
+            // 
+            this.txtMoney.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtMoney.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtMoney.Location = new System.Drawing.Point(160, 159);
+            this.txtMoney.Name = "txtMoney";
+            this.txtMoney.Size = new System.Drawing.Size(331, 47);
+            this.txtMoney.TabIndex = 40;
+            this.txtMoney.Text = "單位:新台幣(NTD)";
+            this.txtMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnCal
+            // 
+            this.btnCal.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnCal.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCal.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCal.Location = new System.Drawing.Point(650, 334);
+            this.btnCal.Name = "btnCal";
+            this.btnCal.Size = new System.Drawing.Size(248, 174);
+            this.btnCal.TabIndex = 28;
+            this.btnCal.Text = "計算按鈕";
+            this.btnCal.UseVisualStyleBackColor = false;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtTotal.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtTotal.Location = new System.Drawing.Point(219, 44);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(272, 47);
+            this.txtTotal.TabIndex = 34;
+            this.txtTotal.Text = "單位:新台幣(NTD)";
+            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblPercentage
+            // 
+            this.lblPercentage.AutoSize = true;
+            this.lblPercentage.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblPercentage.ForeColor = System.Drawing.Color.Black;
+            this.lblPercentage.Location = new System.Drawing.Point(49, 212);
+            this.lblPercentage.Name = "lblPercentage";
+            this.lblPercentage.Size = new System.Drawing.Size(167, 46);
+            this.lblPercentage.TabIndex = 39;
+            this.lblPercentage.TabStop = true;
+            this.lblPercentage.Text = "比例(%):";
+            this.lblPercentage.UseVisualStyleBackColor = true;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblTotal.Location = new System.Drawing.Point(42, 44);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(158, 42);
+            this.lblTotal.TabIndex = 29;
+            this.lblTotal.Text = "房屋總價:";
+            // 
+            // lblLoan
+            // 
+            this.lblLoan.AutoSize = true;
+            this.lblLoan.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblLoan.ForeColor = System.Drawing.Color.Black;
+            this.lblLoan.Location = new System.Drawing.Point(42, 373);
+            this.lblLoan.Name = "lblLoan";
+            this.lblLoan.Size = new System.Drawing.Size(158, 42);
+            this.lblLoan.TabIndex = 32;
+            this.lblLoan.Text = "貸款年限:";
+            // 
+            // lblMoney
+            // 
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblMoney.ForeColor = System.Drawing.Color.Black;
+            this.lblMoney.Location = new System.Drawing.Point(49, 160);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(113, 46);
+            this.lblMoney.TabIndex = 33;
+            this.lblMoney.TabStop = true;
+            this.lblMoney.Text = "金額:";
+            this.lblMoney.UseVisualStyleBackColor = true;
+            // 
+            // lblAnnual
+            // 
+            this.lblAnnual.AutoSize = true;
+            this.lblAnnual.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblAnnual.ForeColor = System.Drawing.Color.Black;
+            this.lblAnnual.Location = new System.Drawing.Point(42, 307);
+            this.lblAnnual.Name = "lblAnnual";
+            this.lblAnnual.Size = new System.Drawing.Size(158, 42);
+            this.lblAnnual.TabIndex = 30;
+            this.lblAnnual.Text = "貸款利率:";
+            // 
+            // Prepare
+            // 
+            this.Prepare.Location = new System.Drawing.Point(34, 108);
+            this.Prepare.Name = "Prepare";
+            this.Prepare.Size = new System.Drawing.Size(493, 171);
+            this.Prepare.TabIndex = 42;
+            this.Prepare.TabStop = false;
+            this.Prepare.Text = "自備款";
+            this.Prepare.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // pageOutput
+            // 
+            this.pageOutput.BackColor = System.Drawing.Color.SteelBlue;
+            this.pageOutput.Controls.Add(this.lblRepayment);
+            this.pageOutput.Controls.Add(this.btnReset);
+            this.pageOutput.Controls.Add(this.txtRepayment);
+            this.pageOutput.Controls.Add(this.lblOutcome);
+            this.pageOutput.Controls.Add(this.txtOutcome);
+            this.pageOutput.Controls.Add(this.lblFirstOut);
+            this.pageOutput.Controls.Add(this.txtFirstOut);
+            this.pageOutput.Controls.Add(this.lblMonthOut);
+            this.pageOutput.Controls.Add(this.txtMonthOut);
+            this.pageOutput.Controls.Add(this.txtTotalOut);
+            this.pageOutput.Controls.Add(this.lblTotalOut);
+            this.pageOutput.ForeColor = System.Drawing.Color.Transparent;
+            this.pageOutput.Location = new System.Drawing.Point(4, 51);
+            this.pageOutput.Name = "pageOutput";
+            this.pageOutput.Padding = new System.Windows.Forms.Padding(3);
+            this.pageOutput.Size = new System.Drawing.Size(920, 532);
+            this.pageOutput.TabIndex = 1;
+            this.pageOutput.Text = "試算結果";
+            // 
+            // lblRepayment
+            // 
+            this.lblRepayment.AutoSize = true;
+            this.lblRepayment.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblRepayment.ForeColor = System.Drawing.Color.Black;
+            this.lblRepayment.Location = new System.Drawing.Point(38, 353);
+            this.lblRepayment.Name = "lblRepayment";
+            this.lblRepayment.Size = new System.Drawing.Size(191, 42);
+            this.lblRepayment.TabIndex = 26;
+            this.lblRepayment.Text = "總還款金額:";
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.MistyRose;
+            this.btnReset.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnReset.ForeColor = System.Drawing.Color.Red;
+            this.btnReset.Location = new System.Drawing.Point(644, 330);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(252, 180);
+            this.btnReset.TabIndex = 34;
+            this.btnReset.Text = "重置/清除";
+            this.btnReset.UseVisualStyleBackColor = false;
+            // 
+            // txtRepayment
+            // 
+            this.txtRepayment.BackColor = System.Drawing.Color.SteelBlue;
+            this.txtRepayment.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtRepayment.ForeColor = System.Drawing.Color.White;
+            this.txtRepayment.Location = new System.Drawing.Point(262, 353);
+            this.txtRepayment.Name = "txtRepayment";
+            this.txtRepayment.ReadOnly = true;
+            this.txtRepayment.Size = new System.Drawing.Size(314, 47);
+            this.txtRepayment.TabIndex = 31;
+            this.txtRepayment.Text = "單位:新台幣(NTD)";
+            this.txtRepayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblOutcome
+            // 
+            this.lblOutcome.AutoSize = true;
+            this.lblOutcome.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblOutcome.ForeColor = System.Drawing.Color.Black;
+            this.lblOutcome.Location = new System.Drawing.Point(38, 301);
+            this.lblOutcome.Name = "lblOutcome";
+            this.lblOutcome.Size = new System.Drawing.Size(191, 42);
+            this.lblOutcome.TabIndex = 27;
+            this.lblOutcome.Text = "總利息支出:";
+            // 
+            // txtOutcome
+            // 
+            this.txtOutcome.BackColor = System.Drawing.Color.SteelBlue;
+            this.txtOutcome.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtOutcome.ForeColor = System.Drawing.Color.White;
+            this.txtOutcome.Location = new System.Drawing.Point(262, 301);
+            this.txtOutcome.Name = "txtOutcome";
+            this.txtOutcome.ReadOnly = true;
+            this.txtOutcome.Size = new System.Drawing.Size(314, 47);
+            this.txtOutcome.TabIndex = 30;
+            this.txtOutcome.Text = "單位:新台幣(NTD)";
+            this.txtOutcome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblFirstOut
+            // 
+            this.lblFirstOut.AutoSize = true;
+            this.lblFirstOut.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblFirstOut.ForeColor = System.Drawing.Color.Black;
+            this.lblFirstOut.Location = new System.Drawing.Point(38, 166);
+            this.lblFirstOut.Name = "lblFirstOut";
+            this.lblFirstOut.Size = new System.Drawing.Size(339, 42);
+            this.lblFirstOut.TabIndex = 25;
+            this.lblFirstOut.Text = "首期利息 與 首期本金:";
+            // 
+            // txtFirstOut
+            // 
+            this.txtFirstOut.BackColor = System.Drawing.Color.SteelBlue;
+            this.txtFirstOut.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtFirstOut.ForeColor = System.Drawing.Color.White;
+            this.txtFirstOut.Location = new System.Drawing.Point(421, 166);
+            this.txtFirstOut.Multiline = true;
+            this.txtFirstOut.Name = "txtFirstOut";
+            this.txtFirstOut.ReadOnly = true;
+            this.txtFirstOut.Size = new System.Drawing.Size(292, 114);
+            this.txtFirstOut.TabIndex = 29;
+            this.txtFirstOut.Tag = "";
+            this.txtFirstOut.Text = "單位:新台幣(NTD)";
+            this.txtFirstOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblMonthOut
+            // 
+            this.lblMonthOut.AutoSize = true;
+            this.lblMonthOut.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblMonthOut.ForeColor = System.Drawing.Color.Black;
+            this.lblMonthOut.Location = new System.Drawing.Point(38, 116);
+            this.lblMonthOut.Name = "lblMonthOut";
+            this.lblMonthOut.Size = new System.Drawing.Size(339, 42);
+            this.lblMonthOut.TabIndex = 33;
+            this.lblMonthOut.Text = "每月應繳金額(本+息):";
+            // 
+            // txtMonthOut
+            // 
+            this.txtMonthOut.BackColor = System.Drawing.Color.SteelBlue;
+            this.txtMonthOut.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtMonthOut.ForeColor = System.Drawing.Color.White;
+            this.txtMonthOut.Location = new System.Drawing.Point(421, 116);
+            this.txtMonthOut.Name = "txtMonthOut";
+            this.txtMonthOut.ReadOnly = true;
+            this.txtMonthOut.Size = new System.Drawing.Size(292, 47);
+            this.txtMonthOut.TabIndex = 32;
+            this.txtMonthOut.Text = "單位:新台幣(NTD)";
+            this.txtMonthOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtTotalOut
+            // 
+            this.txtTotalOut.BackColor = System.Drawing.Color.SteelBlue;
+            this.txtTotalOut.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtTotalOut.ForeColor = System.Drawing.Color.White;
+            this.txtTotalOut.Location = new System.Drawing.Point(262, 55);
+            this.txtTotalOut.Name = "txtTotalOut";
+            this.txtTotalOut.ReadOnly = true;
+            this.txtTotalOut.Size = new System.Drawing.Size(314, 47);
+            this.txtTotalOut.TabIndex = 28;
+            this.txtTotalOut.Text = "單位:新台幣(NTD)";
+            this.txtTotalOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTotalOut.TextChanged += new System.EventHandler(this.TotalOuttxt_TextChanged);
+            // 
+            // lblTotalOut
+            // 
+            this.lblTotalOut.AutoSize = true;
+            this.lblTotalOut.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblTotalOut.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalOut.Location = new System.Drawing.Point(38, 60);
+            this.lblTotalOut.Name = "lblTotalOut";
+            this.lblTotalOut.Size = new System.Drawing.Size(191, 42);
+            this.lblTotalOut.TabIndex = 24;
+            this.lblTotalOut.Text = "貸款總金額:";
             // 
             // label2
             // 
@@ -133,299 +427,6 @@
             this.label2.Text = "個人房貸試算器";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Loantxt
-            // 
-            this.Loantxt.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Loantxt.ForeColor = System.Drawing.Color.DarkGray;
-            this.Loantxt.Location = new System.Drawing.Point(219, 373);
-            this.Loantxt.Name = "Loantxt";
-            this.Loantxt.Size = new System.Drawing.Size(272, 47);
-            this.Loantxt.TabIndex = 36;
-            this.Loantxt.Text = "單位為年";
-            this.Loantxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox7.ForeColor = System.Drawing.Color.DarkGray;
-            this.textBox7.Location = new System.Drawing.Point(219, 214);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(272, 47);
-            this.textBox7.TabIndex = 41;
-            this.textBox7.Text = "百分比(%)";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Annualtxt
-            // 
-            this.Annualtxt.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Annualtxt.ForeColor = System.Drawing.Color.DarkGray;
-            this.Annualtxt.Location = new System.Drawing.Point(219, 307);
-            this.Annualtxt.Name = "Annualtxt";
-            this.Annualtxt.Size = new System.Drawing.Size(272, 47);
-            this.Annualtxt.TabIndex = 35;
-            this.Annualtxt.Tag = "";
-            this.Annualtxt.Text = "百分比(%)";
-            this.Annualtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Gracetxt
-            // 
-            this.Gracetxt.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Gracetxt.ForeColor = System.Drawing.Color.DarkGray;
-            this.Gracetxt.Location = new System.Drawing.Point(273, 436);
-            this.Gracetxt.Name = "Gracetxt";
-            this.Gracetxt.Size = new System.Drawing.Size(218, 47);
-            this.Gracetxt.TabIndex = 37;
-            this.Gracetxt.Text = "單位為年";
-            this.Gracetxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Gracelbl
-            // 
-            this.Gracelbl.AutoSize = true;
-            this.Gracelbl.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Gracelbl.ForeColor = System.Drawing.Color.Black;
-            this.Gracelbl.Location = new System.Drawing.Point(42, 436);
-            this.Gracelbl.Name = "Gracelbl";
-            this.Gracelbl.Size = new System.Drawing.Size(215, 42);
-            this.Gracelbl.TabIndex = 31;
-            this.Gracelbl.Text = "寬限期(選填):";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox6.ForeColor = System.Drawing.Color.DarkGray;
-            this.textBox6.Location = new System.Drawing.Point(160, 159);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(331, 47);
-            this.textBox6.TabIndex = 40;
-            this.textBox6.Text = "單位:新台幣(NTD)";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Calbtn
-            // 
-            this.Calbtn.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.Calbtn.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Calbtn.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Calbtn.Location = new System.Drawing.Point(650, 334);
-            this.Calbtn.Name = "Calbtn";
-            this.Calbtn.Size = new System.Drawing.Size(248, 174);
-            this.Calbtn.TabIndex = 28;
-            this.Calbtn.Text = "計算按鈕";
-            this.Calbtn.UseVisualStyleBackColor = false;
-            // 
-            // Totaltxt
-            // 
-            this.Totaltxt.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Totaltxt.ForeColor = System.Drawing.Color.DarkGray;
-            this.Totaltxt.Location = new System.Drawing.Point(219, 44);
-            this.Totaltxt.Name = "Totaltxt";
-            this.Totaltxt.Size = new System.Drawing.Size(272, 47);
-            this.Totaltxt.TabIndex = 34;
-            this.Totaltxt.Text = "單位:新台幣(NTD)";
-            this.Totaltxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Percentagecheck
-            // 
-            this.Percentagecheck.AutoSize = true;
-            this.Percentagecheck.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Percentagecheck.ForeColor = System.Drawing.Color.Black;
-            this.Percentagecheck.Location = new System.Drawing.Point(49, 212);
-            this.Percentagecheck.Name = "Percentagecheck";
-            this.Percentagecheck.Size = new System.Drawing.Size(167, 46);
-            this.Percentagecheck.TabIndex = 39;
-            this.Percentagecheck.TabStop = true;
-            this.Percentagecheck.Text = "比例(%):";
-            this.Percentagecheck.UseVisualStyleBackColor = true;
-            // 
-            // Totallbl
-            // 
-            this.Totallbl.AutoSize = true;
-            this.Totallbl.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Totallbl.ForeColor = System.Drawing.Color.Black;
-            this.Totallbl.Location = new System.Drawing.Point(42, 44);
-            this.Totallbl.Name = "Totallbl";
-            this.Totallbl.Size = new System.Drawing.Size(158, 42);
-            this.Totallbl.TabIndex = 29;
-            this.Totallbl.Text = "房屋總價:";
-            // 
-            // Loanlbl
-            // 
-            this.Loanlbl.AutoSize = true;
-            this.Loanlbl.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Loanlbl.ForeColor = System.Drawing.Color.Black;
-            this.Loanlbl.Location = new System.Drawing.Point(42, 373);
-            this.Loanlbl.Name = "Loanlbl";
-            this.Loanlbl.Size = new System.Drawing.Size(158, 42);
-            this.Loanlbl.TabIndex = 32;
-            this.Loanlbl.Text = "貸款年限:";
-            // 
-            // Pricecheck
-            // 
-            this.Pricecheck.AutoSize = true;
-            this.Pricecheck.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Pricecheck.ForeColor = System.Drawing.Color.Black;
-            this.Pricecheck.Location = new System.Drawing.Point(49, 160);
-            this.Pricecheck.Name = "Pricecheck";
-            this.Pricecheck.Size = new System.Drawing.Size(113, 46);
-            this.Pricecheck.TabIndex = 33;
-            this.Pricecheck.TabStop = true;
-            this.Pricecheck.Text = "金額:";
-            this.Pricecheck.UseVisualStyleBackColor = true;
-            // 
-            // Annuallbl
-            // 
-            this.Annuallbl.AutoSize = true;
-            this.Annuallbl.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Annuallbl.ForeColor = System.Drawing.Color.Black;
-            this.Annuallbl.Location = new System.Drawing.Point(42, 307);
-            this.Annuallbl.Name = "Annuallbl";
-            this.Annuallbl.Size = new System.Drawing.Size(158, 42);
-            this.Annuallbl.TabIndex = 30;
-            this.Annuallbl.Text = "貸款利率:";
-            // 
-            // Repaymentlbl
-            // 
-            this.Repaymentlbl.AutoSize = true;
-            this.Repaymentlbl.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Repaymentlbl.ForeColor = System.Drawing.Color.Black;
-            this.Repaymentlbl.Location = new System.Drawing.Point(38, 353);
-            this.Repaymentlbl.Name = "Repaymentlbl";
-            this.Repaymentlbl.Size = new System.Drawing.Size(191, 42);
-            this.Repaymentlbl.TabIndex = 26;
-            this.Repaymentlbl.Text = "總還款金額:";
-            // 
-            // Resetbtn
-            // 
-            this.Resetbtn.BackColor = System.Drawing.Color.MistyRose;
-            this.Resetbtn.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Resetbtn.ForeColor = System.Drawing.Color.Red;
-            this.Resetbtn.Location = new System.Drawing.Point(644, 330);
-            this.Resetbtn.Name = "Resetbtn";
-            this.Resetbtn.Size = new System.Drawing.Size(252, 180);
-            this.Resetbtn.TabIndex = 34;
-            this.Resetbtn.Text = "重置/清除";
-            this.Resetbtn.UseVisualStyleBackColor = false;
-            // 
-            // Repaymenttxt
-            // 
-            this.Repaymenttxt.BackColor = System.Drawing.Color.SteelBlue;
-            this.Repaymenttxt.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Repaymenttxt.ForeColor = System.Drawing.Color.White;
-            this.Repaymenttxt.Location = new System.Drawing.Point(262, 353);
-            this.Repaymenttxt.Name = "Repaymenttxt";
-            this.Repaymenttxt.ReadOnly = true;
-            this.Repaymenttxt.Size = new System.Drawing.Size(314, 47);
-            this.Repaymenttxt.TabIndex = 31;
-            this.Repaymenttxt.Text = "單位:新台幣(NTD)";
-            this.Repaymenttxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Outcometlbl
-            // 
-            this.Outcometlbl.AutoSize = true;
-            this.Outcometlbl.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Outcometlbl.ForeColor = System.Drawing.Color.Black;
-            this.Outcometlbl.Location = new System.Drawing.Point(38, 301);
-            this.Outcometlbl.Name = "Outcometlbl";
-            this.Outcometlbl.Size = new System.Drawing.Size(191, 42);
-            this.Outcometlbl.TabIndex = 27;
-            this.Outcometlbl.Text = "總利息支出:";
-            // 
-            // Outcometxt
-            // 
-            this.Outcometxt.BackColor = System.Drawing.Color.SteelBlue;
-            this.Outcometxt.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Outcometxt.ForeColor = System.Drawing.Color.White;
-            this.Outcometxt.Location = new System.Drawing.Point(262, 301);
-            this.Outcometxt.Name = "Outcometxt";
-            this.Outcometxt.ReadOnly = true;
-            this.Outcometxt.Size = new System.Drawing.Size(314, 47);
-            this.Outcometxt.TabIndex = 30;
-            this.Outcometxt.Text = "單位:新台幣(NTD)";
-            this.Outcometxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // FirstOutlbl
-            // 
-            this.FirstOutlbl.AutoSize = true;
-            this.FirstOutlbl.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.FirstOutlbl.ForeColor = System.Drawing.Color.Black;
-            this.FirstOutlbl.Location = new System.Drawing.Point(38, 166);
-            this.FirstOutlbl.Name = "FirstOutlbl";
-            this.FirstOutlbl.Size = new System.Drawing.Size(339, 42);
-            this.FirstOutlbl.TabIndex = 25;
-            this.FirstOutlbl.Text = "首期利息 與 首期本金:";
-            // 
-            // FirstOuttxt
-            // 
-            this.FirstOuttxt.BackColor = System.Drawing.Color.SteelBlue;
-            this.FirstOuttxt.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.FirstOuttxt.ForeColor = System.Drawing.Color.White;
-            this.FirstOuttxt.Location = new System.Drawing.Point(421, 166);
-            this.FirstOuttxt.Multiline = true;
-            this.FirstOuttxt.Name = "FirstOuttxt";
-            this.FirstOuttxt.ReadOnly = true;
-            this.FirstOuttxt.Size = new System.Drawing.Size(292, 114);
-            this.FirstOuttxt.TabIndex = 29;
-            this.FirstOuttxt.Tag = "";
-            this.FirstOuttxt.Text = "單位:新台幣(NTD)";
-            this.FirstOuttxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // MonthOutlbl
-            // 
-            this.MonthOutlbl.AutoSize = true;
-            this.MonthOutlbl.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.MonthOutlbl.ForeColor = System.Drawing.Color.Black;
-            this.MonthOutlbl.Location = new System.Drawing.Point(38, 116);
-            this.MonthOutlbl.Name = "MonthOutlbl";
-            this.MonthOutlbl.Size = new System.Drawing.Size(339, 42);
-            this.MonthOutlbl.TabIndex = 33;
-            this.MonthOutlbl.Text = "每月應繳金額(本+息):";
-            // 
-            // MonthOuttxt
-            // 
-            this.MonthOuttxt.BackColor = System.Drawing.Color.SteelBlue;
-            this.MonthOuttxt.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.MonthOuttxt.ForeColor = System.Drawing.Color.White;
-            this.MonthOuttxt.Location = new System.Drawing.Point(421, 116);
-            this.MonthOuttxt.Name = "MonthOuttxt";
-            this.MonthOuttxt.ReadOnly = true;
-            this.MonthOuttxt.Size = new System.Drawing.Size(292, 47);
-            this.MonthOuttxt.TabIndex = 32;
-            this.MonthOuttxt.Text = "單位:新台幣(NTD)";
-            this.MonthOuttxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // TotalOuttxt
-            // 
-            this.TotalOuttxt.BackColor = System.Drawing.Color.SteelBlue;
-            this.TotalOuttxt.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.TotalOuttxt.ForeColor = System.Drawing.Color.White;
-            this.TotalOuttxt.Location = new System.Drawing.Point(262, 55);
-            this.TotalOuttxt.Name = "TotalOuttxt";
-            this.TotalOuttxt.ReadOnly = true;
-            this.TotalOuttxt.Size = new System.Drawing.Size(314, 47);
-            this.TotalOuttxt.TabIndex = 28;
-            this.TotalOuttxt.Text = "單位:新台幣(NTD)";
-            this.TotalOuttxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // TotalOutlbl
-            // 
-            this.TotalOutlbl.AutoSize = true;
-            this.TotalOutlbl.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.TotalOutlbl.ForeColor = System.Drawing.Color.Black;
-            this.TotalOutlbl.Location = new System.Drawing.Point(38, 60);
-            this.TotalOutlbl.Name = "TotalOutlbl";
-            this.TotalOutlbl.Size = new System.Drawing.Size(191, 42);
-            this.TotalOutlbl.TabIndex = 24;
-            this.TotalOutlbl.Text = "貸款總金額:";
-            // 
-            // Prepare
-            // 
-            this.Prepare.Location = new System.Drawing.Point(34, 108);
-            this.Prepare.Name = "Prepare";
-            this.Prepare.Size = new System.Drawing.Size(493, 171);
-            this.Prepare.TabIndex = 42;
-            this.Prepare.TabStop = false;
-            this.Prepare.Text = "自備款";
-            this.Prepare.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
             // s1131430
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -438,43 +439,43 @@
             this.Text = "個人房貸試篹器";
             this.Load += new System.EventHandler(this.s1131430_Load);
             this.page.ResumeLayout(false);
-            this.Inputpage.ResumeLayout(false);
-            this.Inputpage.PerformLayout();
-            this.Outputpage.ResumeLayout(false);
-            this.Outputpage.PerformLayout();
+            this.pageInput.ResumeLayout(false);
+            this.pageInput.PerformLayout();
+            this.pageOutput.ResumeLayout(false);
+            this.pageOutput.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.TabControl page;
-        private System.Windows.Forms.TabPage Inputpage;
-        private System.Windows.Forms.TabPage Outputpage;
+        private System.Windows.Forms.TabPage pageInput;
+        private System.Windows.Forms.TabPage pageOutput;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Loantxt;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox Annualtxt;
-        private System.Windows.Forms.TextBox Gracetxt;
-        private System.Windows.Forms.Label Gracelbl;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button Calbtn;
-        private System.Windows.Forms.TextBox Totaltxt;
-        private System.Windows.Forms.RadioButton Percentagecheck;
-        private System.Windows.Forms.Label Totallbl;
-        private System.Windows.Forms.Label Loanlbl;
-        private System.Windows.Forms.RadioButton Pricecheck;
-        private System.Windows.Forms.Label Annuallbl;
-        private System.Windows.Forms.Label Repaymentlbl;
-        private System.Windows.Forms.Button Resetbtn;
-        private System.Windows.Forms.TextBox Repaymenttxt;
-        private System.Windows.Forms.Label Outcometlbl;
-        private System.Windows.Forms.TextBox Outcometxt;
-        private System.Windows.Forms.Label FirstOutlbl;
-        private System.Windows.Forms.TextBox FirstOuttxt;
-        private System.Windows.Forms.Label MonthOutlbl;
-        private System.Windows.Forms.TextBox MonthOuttxt;
-        private System.Windows.Forms.TextBox TotalOuttxt;
-        private System.Windows.Forms.Label TotalOutlbl;
+        private System.Windows.Forms.TextBox txtLoan;
+        private System.Windows.Forms.TextBox txtPercentage;
+        private System.Windows.Forms.TextBox txtAnnual;
+        private System.Windows.Forms.TextBox txtGrace;
+        private System.Windows.Forms.Label lblGrace;
+        private System.Windows.Forms.TextBox txtMoney;
+        private System.Windows.Forms.Button btnCal;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.RadioButton lblPercentage;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblLoan;
+        private System.Windows.Forms.RadioButton lblMoney;
+        private System.Windows.Forms.Label lblAnnual;
+        private System.Windows.Forms.Label lblRepayment;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.TextBox txtRepayment;
+        private System.Windows.Forms.Label lblOutcome;
+        private System.Windows.Forms.TextBox txtOutcome;
+        private System.Windows.Forms.Label lblFirstOut;
+        private System.Windows.Forms.TextBox txtFirstOut;
+        private System.Windows.Forms.Label lblMonthOut;
+        private System.Windows.Forms.TextBox txtMonthOut;
+        private System.Windows.Forms.TextBox txtTotalOut;
+        private System.Windows.Forms.Label lblTotalOut;
         private System.Windows.Forms.GroupBox Prepare;
     }
 }
